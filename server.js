@@ -1,12 +1,9 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const logger = require('morgan');
 const path = require('path');
 
 // app
 const app = express();
-
-app.use(logger('dev'));
 
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({extended: true}));
