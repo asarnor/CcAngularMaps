@@ -1,0 +1,24 @@
+<div class="header">
+        <div><img md-card-image src="assets/ie.png" height="100" width="100" alt="i+e"></div>
+        <h1>Google Map Direction Display with Angular 4!</h1>
+</div>
+
+    <div class="form-group search">
+        <md-input-container class="full-width">
+            <input mdInput placeholder="Enter source location" autocorrect="off" autocapitalize="off" spellcheck="off" type="text" class="form-control" #pickupInput [formControl]="destinationInput">
+            <md-icon mdSuffix>search</md-icon>
+        </md-input-container>
+        <md-input-container class="full-width">
+            <input mdInput placeholder="Enter destination" autocorrect="off" autocapitalize="off" spellcheck="off" type="text" class="form-control" #pickupOutput [formControl]="destinationOutput">
+            <md-icon mdSuffix>search</md-icon>
+        </md-input-container>
+    </div>
+
+    <agm-map [latitude]="latitude" [longitude]="longitude" [scrollwheel]="false" [zoom]="zoom" [styles]="mapCustomStyles">
+        <!-- <sebm-google-map-marker [latitude]="latitude" [longitude]="longitude" [iconUrl]="iconurl">
+        <sebm-google-map-info-window>
+        <strong>InfoWindow content</strong>
+    </sebm-google-map-info-window>
+</sebm-google-map-marker> -->
+<sebm-google-map-directions [origin]="origin" [destination]="destination"></sebm-google-map-directions>
+</agm-map>
